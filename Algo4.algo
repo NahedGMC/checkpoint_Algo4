@@ -1,0 +1,15 @@
+function isPalindrome(word) {
+  // Stop condition: empty or single-character word is palindrome
+  if (word.length <= 1) {
+    return true;
+  }
+  
+  // Compare first and last characters
+  if (word[0] === word[word.length - 1]) {
+    // Recursively test the rest of the word
+    return isPalindrome(word.slice(1, word.length - 1));
+  } else {
+    // Characters are different, not a palindrome
+    return false;
+  }
+}
